@@ -18,8 +18,8 @@ public class PlayerController : MonoBehaviour
     {  
         rb2D = gameObject.GetComponent<Rigidbody2D>();
 
-        moveSpeed = 3f;
-        jumpForce = 60f;
+        moveSpeed = 2f;
+        jumpForce = 20f;
         isJumping = false;
 
         
