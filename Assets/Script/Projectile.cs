@@ -4,25 +4,29 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float speed;
-    public float lifeTime;
-    public GameObject destroyEffect;
-
+  public float speed;
+  public float lifeTime;
+  public GameObject destroyEffect;
     
-    public void Start()
+
+    private void start()
         {
             Invoke("DestroyProjectile", lifeTime);
         }
     
     
-    public void Update()
-        {
-            transform.Translate(Vector2.up * speed * Time.deltaTime);
-        }
-    
-    void DestroyProjectile()
+    private void Update()
     {
-        Instantiate(destroyEffect,transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        DestroyProjectile();
     }
+
+    void DestroyProjectile()
+        {
+            Instantiate(destroyEffect, transform.position, Quaternion.identity);
+             Destroy(gameObject);
+        }
+
+     
+
 }
