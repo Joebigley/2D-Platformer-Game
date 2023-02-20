@@ -272,6 +272,26 @@ MonoBehaviour:
   player: {fileID: 1230768369}
   flip: 0
   speed: 3
+--- !u!1 &355357802 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9128360276272336936, guid: 22c3b34461df00e48950151d7eaf92ea, type: 3}
+  m_PrefabInstance: {fileID: 834413729}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &355357804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355357802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9d57bed3b9488438ab20e72bb42e65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 0
+  projectile: {fileID: 0}
+  shotPoint: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,19 +874,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2346974654865270210, guid: 22c3b34461df00e48950151d7eaf92ea, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 1.4459071
+      value: 1.4553094
       objectReference: {fileID: 0}
     - target: {fileID: -2346974654865270210, guid: 22c3b34461df00e48950151d7eaf92ea, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: -0.8262862
+      value: -0.8263564
       objectReference: {fileID: 0}
     - target: {fileID: -2346974654865270210, guid: 22c3b34461df00e48950151d7eaf92ea, type: 3}
       propertyPath: m_Bounds.m_Extent.x
-      value: 0.7547211
+      value: 0.7109588
       objectReference: {fileID: 0}
     - target: {fileID: -2346974654865270210, guid: 22c3b34461df00e48950151d7eaf92ea, type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 0.76328313
+      value: 0.8063489
       objectReference: {fileID: 0}
     - target: {fileID: -2100433674345319598, guid: 22c3b34461df00e48950151d7eaf92ea, type: 3}
       propertyPath: m_LocalPosition.x
