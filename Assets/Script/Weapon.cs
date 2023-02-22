@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,7 @@ public class Weapon : MonoBehaviour
     public float offset;
 
     public GameObject projectile;
-    public GameObject shotEffect;
+    //public GameObject shotEffect;
     public Transform shotPoint;
    
 
@@ -27,17 +28,21 @@ public class Weapon : MonoBehaviour
         {
             if (Input.GetMouseButton(0))
             {
-                Instantiate(shotEffect, shotPoint.position, Quaternion.identity);
+                //Instantiate(shotPoint.position, Quaternion.identity);
                 Instantiate(projectile, shotPoint.position, transform.rotation);
                 timeBtwShots = startTimeBtwShots;
+                
+    
             }
         }
         else {
             timeBtwShots -= Time.deltaTime;
         }
+    }
 
-
-    
+    private GameObject Instantiate(Vector3 position, Quaternion identity)
+    {
+        throw new NotImplementedException();
     }
 }
 

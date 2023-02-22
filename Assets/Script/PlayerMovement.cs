@@ -17,32 +17,54 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       horizontalMove =  Input.GetAxisRaw("Horizontal") * runSpeed;
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-       animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-       
-       if(Input.GetButtonDown("Jump"))
-       {
-        jump = true;
-        animator.SetBool("IsJumping", true);
-       }
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-       if (Input.GetButtonDown("Crouch"))
-       {
-        crouch = true;
-       }
-       else if (Input.GetButtonUp("Crouch"))
-       {
-        crouch = false;
-       }
+        if (Input.GetButtonDown("Jump"))
+        {
+            jump = true;
+            animator.SetBool("IsJumping", true);
+        }
 
+        if (Input.GetButtonDown("Crouch"))
+        {
+            crouch = true;
+        }
+        else if (Input.GetButtonUp("Crouch"))
+        {
+            crouch = false;
+        }
     }
 
-   
-   public void OnLanding()
-   {
+    //Aim mouse other side flips character
+    //
+    //Vector3 theScale = transform.localScale;
+    //Vector3 pos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
+    //float WorldXPos = Camera.main.ScreenToWorldPoint(pos).x;
+    //transform.position += movement * Time.deltaTime * moveSpeed;
+
+    // if (WorldXPos > gameObject.transform.position.x)
+    //{
+    //   theScale.x = 1;
+    //   transform.localScale = theScale;
+    // }
+    // else
+    //  {
+    //   theScale.x = -1;
+    // transform.localScale = theScale;
+    // }
+
+    // }
+
+
+
+
+
+    public void OnLanding()
+    {
       animator.SetBool("IsJumping", false);
-   }
+     }
    
    
    
