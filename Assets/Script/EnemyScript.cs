@@ -12,7 +12,6 @@ public class EnemyScript : MonoBehaviour
     private Vector2 currentPos;
     public float distance;
     public float speedEnemy;
-    public float speedSpeed;
     //private Animator enemyAnim;
     
     
