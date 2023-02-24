@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -7,20 +8,26 @@ public class Projectile : MonoBehaviour
 {
   public float speed;
   public float lifeTime;
-  //public GameObject destroyEffect;
-  
-    
+    //public GameObject destroyEffect;
+    public float timer;
+
 
     void Start()
         {
-            //Invoke("DestroyProjectile", lifeTime);
-        }
+        //Invoke("DestroyProjectile", lifeTime);
+        
+    }
     
     
     private void Update()
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
-
+        timer += 1.0F * Time.deltaTime;
+        
+        if (timer >= 3)
+        {
+            GameObject.Destroy(gameObject);
+        }
 
 
 
@@ -35,8 +42,12 @@ public class Projectile : MonoBehaviour
         if (collision.collider.gameObject.tag == "Enemy")
         {
             collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(1);
+            
         }
+
+       
     }
+    
 
 
 

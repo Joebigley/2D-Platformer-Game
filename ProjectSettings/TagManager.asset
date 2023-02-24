@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Platform
   - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -13,12 +14,12 @@ TagManager:
   - 
   - Water
   - UI
-  - Player
   - 
   - Enemy
   - Projectile
   - 
-  - 
+  - Player
+  - Ground
   - 
   - 
   - 
@@ -42,4 +43,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 3547610449
+    locked: 0
+  - name: Ground
+    uniqueID: 4120988569
     locked: 0
