@@ -13,7 +13,8 @@ public class EnemyScript : MonoBehaviour
     public float distance;
     public float speedEnemy;
     //private Animator enemyAnim;
-    
+
+
     
     // Start is called before the first frame update
     void Start()
@@ -45,4 +46,7 @@ public class EnemyScript : MonoBehaviour
             }
         }
     }
+
+
+
 }
