@@ -10,6 +10,7 @@ public class Projectile : MonoBehaviour
   public float lifeTime;
     //public GameObject destroyEffect;
     public float timer;
+    
 
 
     void Start()
@@ -45,9 +46,16 @@ public class Projectile : MonoBehaviour
             
         }
 
+        if(collision.collider.gameObject.tag == "Platform")
+        {
+            Destroy(gameObject);
+        }
+
        
     }
-    
+
+  
+
 
 
 
