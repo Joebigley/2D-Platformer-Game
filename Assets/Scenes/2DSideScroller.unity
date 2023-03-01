@@ -614,7 +614,7 @@ GameObject:
   - component: {fileID: 1525162408}
   m_Layer: 0
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -659,9 +659,9 @@ GameObject:
   - component: {fileID: 1607397124}
   - component: {fileID: 1607397123}
   - component: {fileID: 1607397125}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
