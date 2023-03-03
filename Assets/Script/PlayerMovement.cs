@@ -14,8 +14,16 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
     bool crouch = false;
 
+    
+
+    
+
     CircleCollider2D circleCollider;
     // Update is called once per frame
+    
+    
+   
+    
     private void Awake()
     {
         circleCollider = GetComponent<CircleCollider2D>();
@@ -28,8 +36,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            jump = true;
-            animator.SetBool("IsJumping", true);
+                jump = true;
+                animator.SetBool("IsJumping", true);
+            
         }
 
         if (Input.GetButtonDown("Crouch"))
@@ -42,6 +51,10 @@ public class PlayerMovement : MonoBehaviour
             crouch = false;
             circleCollider.offset = new Vector2(circleCollider.offset.x, circleCollider.offset.y * 2);
         }
+
+
+
+
     }
 
     //Aim mouse other side flips character
@@ -71,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
     public void OnLanding()
     {
       animator.SetBool("IsJumping", false);
-     }
+    }
    
     public void OnCrouching(bool isCrouching)
     {
