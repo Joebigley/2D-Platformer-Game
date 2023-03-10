@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    
+
     public PlayerController controller;
     public Animator animator;
     public Rigidbody2D rb;
@@ -20,22 +20,22 @@ public class PlayerMovement : MonoBehaviour
     public Transform bulletPrefab;
 
 
-    float  horizontalMove = 0f;
+    float horizontalMove = 0f;
     public float runSpeed = 40f;
 
     bool jump = false;
     bool crouch = false;
 
-    
 
-    
+
+
 
     CircleCollider2D circleCollider;
     // Update is called once per frame
-    
-    
-   
-    
+
+
+
+
     private void Awake()
     {
         circleCollider = GetComponent<CircleCollider2D>();
@@ -46,32 +46,35 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        if(!_knockbacked) 
-        {
-            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-        }
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
+        if (!_knockbacked)
+        {
+           
+
+            
+}
         else
         {
             var LerpedXVelocity = Mathf.Lerp(rb.velocity.x, 0f, Time.deltaTime * 3);
             rb.velocity = new Vector2(LerpedXVelocity, rb.velocity.y);
         }
-        
-        
+
+
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         if (Input.GetButtonDown("Jump"))
         {
-                jump = true;
-                animator.SetBool("IsJumping", true);
-            
+            jump = true;
+            animator.SetBool("IsJumping", true);
+
         }
 
         if (Input.GetButtonDown("Crouch"))
         {
             crouch = true;
-            circleCollider.offset = new Vector2 (circleCollider.offset.x, circleCollider.offset.y /2);
+            circleCollider.offset = new Vector2(circleCollider.offset.x, circleCollider.offset.y / 2);
         }
         else if (Input.GetButtonUp("Crouch"))
         {
@@ -110,23 +113,23 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnLanding()
     {
-      animator.SetBool("IsJumping", false);
+        animator.SetBool("IsJumping", false);
     }
-   
+
     public void OnCrouching(bool isCrouching)
     {
 
         animator.SetBool("IsCrouching", isCrouching);
     }
-   
-   
-   
-   void FixedUpdate() 
-   {
+
+
+
+    void FixedUpdate()
+    {
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
-        
-   }
+
+    }
 
     public void Knockback(Transform t)
     {

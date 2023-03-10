@@ -53,10 +53,7 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (collision.collider.gameObject.tag == "Player")
-        {
-            Destroy(gameObject);
-        }
+        
 
 
 
