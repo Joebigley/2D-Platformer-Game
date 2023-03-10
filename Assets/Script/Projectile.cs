@@ -11,11 +11,13 @@ public class Projectile : MonoBehaviour
     //public GameObject destroyEffect;
     public float timer;
     
+    
 
 
     void Start()
-        {
+      {
         //Invoke("DestroyProjectile", lifeTime);
+
         
     }
     
@@ -51,7 +53,13 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
         }
 
-       
+        if (collision.collider.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+
+
+
     }
 
   

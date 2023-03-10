@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool _knockbacked;
     private SpriteRenderer[] _spriteRenderers;
 
+    public Transform bulletPrefab;
+
 
     float  horizontalMove = 0f;
     public float runSpeed = 40f;
@@ -38,6 +40,9 @@ public class PlayerMovement : MonoBehaviour
     {
         circleCollider = GetComponent<CircleCollider2D>();
         _spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+
+        Transform bullet = Instantiate(bulletPrefab) as Transform;
+        Physics2D.IgnoreCollision(bullet.GetComponent<Collider2D>(), GetComponent<Collider2D>());
     }
     void Update()
     {
