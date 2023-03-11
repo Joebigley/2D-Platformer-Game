@@ -45,7 +45,8 @@ public class Projectile : MonoBehaviour
         if (collision.collider.gameObject.tag == "Enemy")
         {
             collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(1);
-            
+            Destroy(gameObject);
+
         }
 
         if(collision.collider.gameObject.tag == "Platform")

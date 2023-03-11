@@ -82,6 +82,11 @@ public class PlayerMovement : MonoBehaviour
             circleCollider.offset = new Vector2(circleCollider.offset.x, circleCollider.offset.y * 2);
         }
 
+     
+        
+
+        
+
 
 
 

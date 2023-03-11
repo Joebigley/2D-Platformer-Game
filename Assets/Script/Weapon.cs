@@ -35,6 +35,8 @@ public class Weapon : MonoBehaviour
         player = transform.parent;
 
         angle = 90;
+
+        
     }
 
     private void Update()
@@ -61,6 +63,8 @@ public class Weapon : MonoBehaviour
         angle = Mathf.RoundToInt(Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
         angle = Mathf.Clamp(angle, minAngle, maxAngle);
         transform.localRotation = Quaternion.Euler(0f, 0f, angle);
+
+        
 
 
         

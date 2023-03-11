@@ -5,8 +5,18 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour
 {
 
+    
     public int damage;
     public PlayerHealth playerHealth;
+
+
+
+
+    private void Start()
+    {
+        
+        playerHealth = GameObject.Find("Player").GetComponent<PlayerHealth>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,5 +24,8 @@ public class EnemyDamage : MonoBehaviour
         {
             playerHealth.TakeDamage(damage);
         }
+    
+        
+    
     }
 }
