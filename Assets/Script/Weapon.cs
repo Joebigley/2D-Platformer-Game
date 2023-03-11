@@ -60,9 +60,12 @@ public class Weapon : MonoBehaviour
             dir.x *= -1;
         }
 
-        angle = Mathf.RoundToInt(Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
-        angle = Mathf.Clamp(angle, minAngle, maxAngle);
-        transform.localRotation = Quaternion.Euler(0f, 0f, angle);
+       
+        
+            //CLAMP DO NOT REMOVE        
+        //angle = Mathf.RoundToInt(Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
+        //angle = Mathf.Clamp(angle, minAngle, maxAngle);
+        //transform.localRotation = Quaternion.Euler(0f, 0f, angle);
 
         
 
