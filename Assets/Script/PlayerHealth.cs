@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
 
     public float maxHealth = 100;
-    public float health;
+    public float currenthealth;
     public Image healthBar;
     
     
@@ -15,24 +15,24 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health = maxHealth;
+        currenthealth = maxHealth;
     }
 
 
     private void Update()
     {
-        healthBar.fillAmount = Mathf.Clamp(health / maxHealth, 0, 1);
+        healthBar.fillAmount = Mathf.Clamp(currenthealth / maxHealth, 0, 1);
     }
 
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        currenthealth -= damage;
          
 
         
 
-        if (health < 0)
+        if (currenthealth < 0)
         {
             Destroy(gameObject);
 

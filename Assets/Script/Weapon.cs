@@ -21,12 +21,12 @@ public class Weapon : MonoBehaviour
     
     private Vector3 pos;
     private Vector2 dir;
-    private Transform player;
+    public Transform player;
 
     public int maxAngle;
     public int minAngle;
 
-    private int angle;
+    private int Angle;
 
 
 
@@ -34,31 +34,34 @@ public class Weapon : MonoBehaviour
     {
         player = transform.parent;
 
-        angle = 90;
+        Angle = 0;
 
         
     }
 
     private void Update()
     {
-        // Handles the weapon rotation
-       
-        
-        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
-
-
-
         pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        dir = pos - transform.position;
+        Vector3 dir = pos - transform.position;
         dir.Normalize();
+        Angle = Mathf.RoundToInt(Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
 
-        if (player.localScale.x == -1)
+
+        if (player.localScale.x == 1)
         {
-            dir.x *= -1;
+            Angle = Mathf.Clamp(Angle, minAngle, maxAngle);
+            transform.localRotation = Quaternion.Euler(0f, 0f, Angle);
         }
+        else
+        {
+            Angle = Mathf.Clamp(Angle, 180 - maxAngle, 180 - minAngle);
+            transform.localRotation = Quaternion.Euler(0f, 0f, -Angle - 180f);
+        }
+    
+
+
+
 
        
         
@@ -90,9 +93,6 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    private GameObject Instantiate(Vector3 position, Quaternion identity)
-    {
-        throw new NotImplementedException();
-    }
+   
 }
 
