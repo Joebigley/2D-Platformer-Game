@@ -3,33 +3,61 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Projectile : MonoBehaviour
 {
   public float speed;
   public float lifeTime;
     //public GameObject destroyEffect;
-    public float timer;
-    
-    
+  public float timer;
+  public Transform Player;
+  
+  
+
 
 
     void Start()
       {
         //Invoke("DestroyProjectile", lifeTime);
+        Player = Player.transform;
 
-        
     }
     
     
     private void Update()
     {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
-        timer += 1.0F * Time.deltaTime;
+        //transform.Translate(Vector2.right * speed * Time.deltaTime);
+        //timer += 1.0F * Time.deltaTime;
         
-        if (timer >= 3)
+        //if (timer >= 3)
+        //{
+          //  GameObject.Destroy(gameObject);
+        //}
+
+        if (Player.localScale.x == 1)
         {
-            GameObject.Destroy(gameObject);
+            Player = Player.transform;
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
+            timer += 1.0F * Time.deltaTime;
+            
+
+            if (timer >= 3)
+            {
+                GameObject.Destroy(gameObject);
+            }
+        }
+        else
+        {
+            Player = Player.transform;
+            transform.Translate(Vector2.left * speed * Time.deltaTime);
+            timer += 1.0F * Time.deltaTime;
+            
+
+            if (timer >= 3)
+            {
+                GameObject.Destroy(gameObject);
+            }
         }
 
 

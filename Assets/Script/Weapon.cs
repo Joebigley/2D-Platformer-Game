@@ -32,7 +32,7 @@ public class Weapon : MonoBehaviour
 
     private void Start()
     {
-        player = transform.parent;
+        
 
         Angle = 0;
 
@@ -43,37 +43,19 @@ public class Weapon : MonoBehaviour
     {
         pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        Vector3 dir = pos - transform.position;
+        dir = pos - transform.position;
         dir.Normalize();
+
+        if (player.localScale.x == -1)
+        {
+            dir.x *= -1;
+            pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }
+
         Angle = Mathf.RoundToInt(Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
+        Angle = Mathf.Clamp(Angle, minAngle, maxAngle);
+        transform.localRotation = Quaternion.Euler(0f, 0f, Angle);
 
-
-        if (player.localScale.x == 1)
-        {
-            Angle = Mathf.Clamp(Angle, minAngle, maxAngle);
-            transform.localRotation = Quaternion.Euler(0f, 0f, Angle);
-        }
-        else
-        {
-            Angle = Mathf.Clamp(Angle, 180 - maxAngle, 180 - minAngle);
-            transform.localRotation = Quaternion.Euler(0f, 0f, -Angle - 180f);
-        }
-    
-
-
-
-
-       
-        
-            //CLAMP DO NOT REMOVE        
-        //angle = Mathf.RoundToInt(Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
-        //angle = Mathf.Clamp(angle, minAngle, maxAngle);
-        //transform.localRotation = Quaternion.Euler(0f, 0f, angle);
-
-        
-
-
-        
 
 
 
