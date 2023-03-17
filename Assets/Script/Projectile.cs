@@ -13,55 +13,29 @@ public class Projectile : MonoBehaviour
   public float timer;
   public Transform Player;
   
-  
-
-
-
     void Start()
-      {
+     {
         //Invoke("DestroyProjectile", lifeTime);
         Player = Player.transform;
-
     }
     
     
     private void Update()
     {
+
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
+
         //transform.Translate(Vector2.right * speed * Time.deltaTime);
         //timer += 1.0F * Time.deltaTime;
-        
+
         //if (timer >= 3)
         //{
-          //  GameObject.Destroy(gameObject);
+        //  GameObject.Destroy(gameObject);
         //}
-
-        if (Player.localScale.x == 1)
+        if (timer >= 3)
         {
-            Player = Player.transform;
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
-            timer += 1.0F * Time.deltaTime;
-            
-
-            if (timer >= 3)
-            {
-                GameObject.Destroy(gameObject);
-            }
+            GameObject.Destroy(gameObject);
         }
-        else
-        {
-            Player = Player.transform;
-            transform.Translate(Vector2.left * speed * Time.deltaTime);
-            timer += 1.0F * Time.deltaTime;
-            
-
-            if (timer >= 3)
-            {
-                GameObject.Destroy(gameObject);
-            }
-        }
-
-
-
         //DestroyProjectile();
         //GameObject clone =  Instantiate(destroyEffect, transform.position, Quaternion.identity);
         //Destroy(clone, 3);

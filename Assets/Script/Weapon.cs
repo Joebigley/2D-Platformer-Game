@@ -13,7 +13,8 @@ public class Weapon : MonoBehaviour
 
     public GameObject projectile;
     //public GameObject shotEffect;
-    public Transform shotPoint;
+    public Transform shotPointR;
+    public Transform shotPointL;
     
 
     private float timeBtwShots;
@@ -28,15 +29,10 @@ public class Weapon : MonoBehaviour
 
     private int Angle;
 
-
-
+    bool facingLeft = false;
     private void Start()
     {
-        
-
         Angle = 0;
-
-        
     }
 
     private void Update()
@@ -46,35 +42,41 @@ public class Weapon : MonoBehaviour
         dir = pos - transform.position;
         dir.Normalize();
 
+        //When the player faces left
         if (player.localScale.x == -1)
         {
             dir.x *= -1;
-            pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            facingLeft = true;
+        }
+        if (player.localScale.x == 1)
+        {
+            facingLeft = false;
         }
 
         Angle = Mathf.RoundToInt(Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
         Angle = Mathf.Clamp(Angle, minAngle, maxAngle);
         transform.localRotation = Quaternion.Euler(0f, 0f, Angle);
 
-
-
-
         if (timeBtwShots <= 0)
         {
             if (Input.GetMouseButton(0))
             {
                 //Instantiate(shotPoint.position, Quaternion.identity);
-                Instantiate(projectile, shotPoint.position, transform.rotation);
-                timeBtwShots = startTimeBtwShots;
+                if (!facingLeft)
+                {
+                    Instantiate(projectile, shotPointR.position, shotPointR.transform.rotation);
+                } else if (facingLeft)
+                {
+                    Debug.Log("FACING LEFT");
+                    Instantiate(projectile, shotPointL.position, shotPointL.transform.rotation);
+                }
                 
-    
+                timeBtwShots = startTimeBtwShots;
             }
         }
         else {
             timeBtwShots -= Time.deltaTime;
         }
     }
-
-   
 }
 
