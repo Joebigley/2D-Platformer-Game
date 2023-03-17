@@ -10,12 +10,6 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public Rigidbody2D rb;
 
-    [Header("Knockback")]
-    [SerializeField] private Transform _centre;
-    [SerializeField] private float _knockbackVel = 8f;
-    [SerializeField] private float _knockbackTime = 1f;
-    [SerializeField] private bool _knockbacked;
-    private SpriteRenderer[] _spriteRenderers;
 
     public Transform bulletPrefab;
 
@@ -39,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         circleCollider = GetComponent<CircleCollider2D>();
-        _spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+       
 
         Transform bullet = Instantiate(bulletPrefab) as Transform;
         Physics2D.IgnoreCollision(bullet.GetComponent<Collider2D>(), GetComponent<Collider2D>());
@@ -48,17 +42,10 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-        if (!_knockbacked)
-        {
-           
 
-            
-}
-        else
-        {
-            var LerpedXVelocity = Mathf.Lerp(rb.velocity.x, 0f, Time.deltaTime * 3);
-            rb.velocity = new Vector2(LerpedXVelocity, rb.velocity.y);
-        }
+        var LerpedXVelocity = Mathf.Lerp(rb.velocity.x, 0f, Time.deltaTime * 3);
+        rb.velocity = new Vector2(LerpedXVelocity, rb.velocity.y);
+
 
 
 
@@ -136,35 +123,5 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    public void Knockback(Transform t)
-    {
-        var dir = _centre.position - t.position;
-        _knockbacked = true;
-        rb.velocity = dir.normalized * _knockbackVel;
-        foreach (var spriteRenderer in _spriteRenderers)
-        {
-            spriteRenderer.color = Color.red;
-        }
-
-        StartCoroutine(FadeToWhite());
-        StartCoroutine(Unknockback());
-    }
-
-    private IEnumerator FadeToWhite()
-    {
-        while (_spriteRenderers[0].color != Color.white)
-        {
-            yield return null;
-            foreach (var spriteRenderer in _spriteRenderers)
-            {
-                spriteRenderer.color = Color.Lerp(spriteRenderer.color, Color.white, Time.deltaTime * 3);
-            }
-        }
-    }
-
-    private IEnumerator Unknockback()
-    {
-        yield return new WaitForSeconds(_knockbackTime);
-        _knockbacked = false;
-    }
+    
 }

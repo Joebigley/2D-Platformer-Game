@@ -8,6 +8,9 @@ public class EnemyHealth : MonoBehaviour
     public int currentHealth;
 
     public GameObject[] itemDrops;
+    public int flickerAmnt;
+    public float flickerDuration;
+    public SpriteRenderer[] sprites;
 
     void Start()
     {
@@ -17,6 +20,10 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
+        StartCoroutine(DamageFlicker());
+
+
+
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
@@ -31,6 +38,26 @@ public class EnemyHealth : MonoBehaviour
             Instantiate(itemDrops[i], transform.position + new Vector3(0, 1, 0), Quaternion.identity);
         }
 
+
+    }
+
+    IEnumerator DamageFlicker()
+    {
+
+        for (int i = 0; i < flickerAmnt; i++)
+        {
+            foreach (SpriteRenderer s in sprites)
+            {
+                s.color = new Color(1f, 1f, 1f, .6f);
+            }
+            yield return new WaitForSeconds(flickerDuration);
+            foreach (SpriteRenderer s in sprites)
+            {
+                s.color = Color.white;
+            }
+            yield return new WaitForSeconds(flickerDuration);
+
+        }
 
     }
 }
