@@ -21,7 +21,7 @@ TagManager:
   - Player
   - Foreground
   - Pickups
-  - 
+  - Platforms
   - 
   - 
   - 
@@ -44,8 +44,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Level BG
+    uniqueID: 3560368373
+    locked: 0
   - name: Player
     uniqueID: 3547610449
+    locked: 0
+  - name: Level FG
+    uniqueID: 1736030593
     locked: 0
   - name: Ground
     uniqueID: 4120988569
