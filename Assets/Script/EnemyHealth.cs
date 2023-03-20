@@ -48,7 +48,7 @@ public class EnemyHealth : MonoBehaviour
         {
             foreach (SpriteRenderer s in sprites)
             {
-                s.color = new Color(1f, 0f, 0f, .6f);
+                s.color = new Color(1f, 1f, 1f, .6f);
             }
             yield return new WaitForSeconds(flickerDuration);
             foreach (SpriteRenderer s in sprites)

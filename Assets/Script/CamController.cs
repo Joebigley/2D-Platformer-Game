@@ -11,8 +11,7 @@ public class CamController : MonoBehaviour
     private Vector3 targetPos, newPos;
     public Vector3 minPos, maxPos;
     
-
-
+    
     // Start is called before the first frame update
     void LateUpdate()
     {
@@ -33,7 +32,7 @@ public class CamController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         
     }
