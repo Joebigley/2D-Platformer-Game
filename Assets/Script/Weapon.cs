@@ -37,46 +37,59 @@ public class Weapon : MonoBehaviour
 
     private void Update()
     {
-        pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        dir = pos - transform.position;
-        dir.Normalize();
-
-        //When the player faces left
-        if (player.localScale.x == -1)
+        if (PauseMenu.GameIsPaused == true || ID.GameIsPaused == true)
         {
-            dir.x *= -1;
-            facingLeft = true;
+
+
         }
-        if (player.localScale.x == 1)
+        else
         {
-            facingLeft = false;
-        }
+            pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        Angle = Mathf.RoundToInt(Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
-        Angle = Mathf.Clamp(Angle, minAngle, maxAngle);
-        transform.localRotation = Quaternion.Euler(0f, 0f, Angle);
+            dir = pos - transform.position;
+            dir.Normalize();
 
-        if (timeBtwShots <= 0)
-        {
-            if (Input.GetMouseButton(0))
+            //When the player faces left
+            if (player.localScale.x == -1)
             {
-                //Instantiate(shotPoint.position, Quaternion.identity);
-                if (!facingLeft)
-                {
-                    Instantiate(projectile, shotPointR.position, shotPointR.transform.rotation);
-                } else if (facingLeft)
-                {
-                    Debug.Log("FACING LEFT");
-                    Instantiate(projectile, shotPointL.position, shotPointL.transform.rotation);
-                }
-                
-                timeBtwShots = startTimeBtwShots;
+                dir.x *= -1;
+                facingLeft = true;
             }
+            if (player.localScale.x == 1)
+            {
+                facingLeft = false;
+            }
+
+            Angle = Mathf.RoundToInt(Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
+            Angle = Mathf.Clamp(Angle, minAngle, maxAngle);
+            transform.localRotation = Quaternion.Euler(0f, 0f, Angle);
+
+
+            if (timeBtwShots <= 0)
+            {
+                if (Input.GetMouseButton(0))
+                {
+                    //Instantiate(shotPoint.position, Quaternion.identity);
+                    if (!facingLeft)
+                    {
+                        Instantiate(projectile, shotPointR.position, shotPointR.transform.rotation);
+                    }
+                    else if (facingLeft)
+                    {
+
+                        Instantiate(projectile, shotPointL.position, shotPointL.transform.rotation);
+                    }
+
+                    timeBtwShots = startTimeBtwShots;
+                }
+            }
+            else
+            {
+                timeBtwShots -= Time.deltaTime;
+            }
+
+
         }
-        else {
-            timeBtwShots -= Time.deltaTime;
-        }
+
     }
 }
-
