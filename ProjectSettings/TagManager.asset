@@ -43,3 +43,33 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< Updated upstream
+=======
+  - name: Boss Room BG
+    uniqueID: 2723522355
+    locked: 0
+  - name: Boss
+    uniqueID: 2770479227
+    locked: 0
+  - name: Level BG
+    uniqueID: 3560368373
+    locked: 0
+  - name: Player
+    uniqueID: 3547610449
+    locked: 0
+  - name: Platform MG
+    uniqueID: 1641569659
+    locked: 0
+  - name: Platforms
+    uniqueID: 202085645
+    locked: 0
+  - name: Darkness
+    uniqueID: 353141443
+    locked: 0
+  - name: Level FG
+    uniqueID: 1736030593
+    locked: 0
+  - name: Ground
+    uniqueID: 4120988569
+    locked: 0
+>>>>>>> Stashed changes
