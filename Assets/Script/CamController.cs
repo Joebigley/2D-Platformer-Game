@@ -14,7 +14,7 @@ public class CamController : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void LateUpdate()
+    void FixedUpdate()
     {
         if (transform.position != player.position)
         {
@@ -33,8 +33,6 @@ public class CamController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
-    {
-        
-    }
+      
+    
 }
