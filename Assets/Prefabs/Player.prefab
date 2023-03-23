@@ -51,6 +51,7 @@ GameObject:
   - component: {fileID: 7094700746654287806}
   - component: {fileID: 265146226877758612}
   - component: {fileID: 265146226877758610}
+  - component: {fileID: 9137611972919832858}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -286,6 +287,102 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.59695435, y: 0.7612686}
   m_EdgeRadius: 0
+--- !u!82 &9137611972919832858
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265146226877758615}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: dd5ecfef6c2d613449dffa57084c6acb, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1.5
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &438825759388948840
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,8 +487,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -747356847
+  m_SortingLayer: 2
   m_SortingOrder: 6
   m_Sprite: {fileID: -1060165227270732006, guid: 22c3b34461df00e48950151d7eaf92ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -496,8 +593,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -747356847
+  m_SortingLayer: 2
   m_SortingOrder: 9
   m_Sprite: {fileID: -5829029928040439923, guid: 22c3b34461df00e48950151d7eaf92ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -527,7 +624,7 @@ MonoBehaviour:
   - {fileID: 4566517702551943999}
   - {fileID: 2270934517710781762}
   m_Bounds:
-    m_Center: {x: -0.008085668, y: -0.0038819313, z: 2.5355448e-15}
+    m_Center: {x: -0.008081853, y: -0.0038809776, z: 2.5355448e-15}
     m_Extent: {x: 0.8380306, y: 1.0006845, z: 1.3958416e-14}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -635,8 +732,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -747356847
+  m_SortingLayer: 2
   m_SortingOrder: 11
   m_Sprite: {fileID: -6969755315367268600, guid: 22c3b34461df00e48950151d7eaf92ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -666,8 +763,8 @@ MonoBehaviour:
   - {fileID: 2270934517710781762}
   - {fileID: 6973329075222712}
   m_Bounds:
-    m_Center: {x: -0.1030907, y: 0.008087873, z: 9.91671e-14}
-    m_Extent: {x: 0.9371477, y: 1.2881243, z: 6.5880725e-14}
+    m_Center: {x: -0.10309303, y: 0.008087158, z: 9.91671e-14}
+    m_Extent: {x: 0.93714917, y: 1.2881248, z: 6.5880725e-14}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -742,8 +839,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -747356847
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: -5834496739055628527, guid: 22c3b34461df00e48950151d7eaf92ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -772,7 +869,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 5469969787612160409}
   m_Bounds:
-    m_Center: {x: 0.8948843, y: -0.90907407, z: 2.8387798e-14}
+    m_Center: {x: 0.8948805, y: -0.90907216, z: 2.8387798e-14}
     m_Extent: {x: 0.518582, y: 1.6275637, z: 4.414578e-14}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -879,8 +976,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -747356847
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 6361471608939579079, guid: 22c3b34461df00e48950151d7eaf92ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1114,8 +1211,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -747356847
+  m_SortingLayer: 2
   m_SortingOrder: 8
   m_Sprite: {fileID: -6042892814470989818, guid: 22c3b34461df00e48950151d7eaf92ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1146,8 +1243,8 @@ MonoBehaviour:
   - {fileID: 2270934517710781762}
   - {fileID: 6973329075222712}
   m_Bounds:
-    m_Center: {x: -0.021745443, y: 0.005919695, z: 2.2243907e-14}
-    m_Extent: {x: 0.75474024, y: 1.1511289, z: 2.463893e-14}
+    m_Center: {x: -0.021745443, y: 0.0059195757, z: 2.2243907e-14}
+    m_Extent: {x: 0.75474024, y: 1.1511288, z: 2.463893e-14}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1222,8 +1319,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -747356847
+  m_SortingLayer: 2
   m_SortingOrder: 4
   m_Sprite: {fileID: 594146077329083084, guid: 22c3b34461df00e48950151d7eaf92ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1252,7 +1349,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 8439339705492177668}
   m_Bounds:
-    m_Center: {x: 2.2408414, y: -1.2737048, z: 7.034905e-14}
+    m_Center: {x: 2.2408376, y: -1.2737043, z: 7.034905e-14}
     m_Extent: {x: 0.77993983, y: 0.6688866, z: 1.4040942e-14}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1359,8 +1456,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -747356847
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 5166882903533097653, guid: 22c3b34461df00e48950151d7eaf92ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1389,7 +1486,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 7638095049911055606}
   m_Bounds:
-    m_Center: {x: -0.23093182, y: -0.080976605, z: 2.3611648e-14}
+    m_Center: {x: -0.23093182, y: -0.08097565, z: 2.3611648e-14}
     m_Extent: {x: 0.57852733, y: 0.97706234, z: 3.4187808e-14}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1529,8 +1626,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -747356847
+  m_SortingLayer: 2
   m_SortingOrder: 5
   m_Sprite: {fileID: 145415058101124645, guid: 22c3b34461df00e48950151d7eaf92ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1559,7 +1656,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 6062983958551083117}
   m_Bounds:
-    m_Center: {x: -0.06119728, y: -0.2042414, z: -1.0969754e-16}
+    m_Center: {x: -0.06118965, y: -0.20424044, z: -1.0969754e-16}
     m_Extent: {x: 0.7398773, y: 1.6139673, z: 1.426925e-14}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1635,8 +1732,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -747356847
+  m_SortingLayer: 2
   m_SortingOrder: 10
   m_Sprite: {fileID: -3971517161598511832, guid: 22c3b34461df00e48950151d7eaf92ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1866,8 +1963,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -747356847
+  m_SortingLayer: 2
   m_SortingOrder: 7
   m_Sprite: {fileID: 8231700171510702560, guid: 22c3b34461df00e48950151d7eaf92ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1896,7 +1993,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 1715867369553003356}
   m_Bounds:
-    m_Center: {x: -3.156885, y: 0.2511354, z: 0.0004940947}
+    m_Center: {x: -3.156881, y: 0.2511354, z: 0.0004940947}
     m_Extent: {x: 0.9102423, y: 0.60319203, z: 0.0012647107}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -2005,8 +2102,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -747356847
+  m_SortingLayer: 2
   m_SortingOrder: 13
   m_Sprite: {fileID: -3569024180723049296, guid: 22c3b34461df00e48950151d7eaf92ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2035,7 +2132,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 2627982694479761956}
   m_Bounds:
-    m_Center: {x: 0.4603489, y: 1.7279112, z: 8.149059e-10}
+    m_Center: {x: 0.46034938, y: 1.7279112, z: 6.984906e-10}
     m_Extent: {x: 0.6254002, y: 0.86566997, z: 5.426215e-14}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -2142,7 +2239,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 9010395730067574559}
   m_Bounds:
-    m_Center: {x: 0.19462818, y: -0.44549853, z: 0.0000000016298141}
+    m_Center: {x: 0.19462913, y: -0.44549853, z: 0.0000000016298141}
     m_Extent: {x: 0.711796, y: 0.8960156, z: 6.4781513e-14}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -2157,6 +2254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9034973724823136216}
   - component: {fileID: 9034973724823136217}
+  - component: {fileID: 1227693351}
   m_Layer: 10
   m_Name: Arm Rotation
   m_TagString: Player
@@ -2203,6 +2301,102 @@ MonoBehaviour:
   player: {fileID: 1397774783359100148}
   maxAngle: 78
   minAngle: -60
+--- !u!82 &1227693351
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9034973724823136219}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e74a12cff95d2f04ca2b0bb8e987c2db, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &9034973725076666602
 GameObject:
   m_ObjectHideFlags: 0

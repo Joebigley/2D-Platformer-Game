@@ -30,9 +30,11 @@ public class Weapon : MonoBehaviour
     private int Angle;
 
     bool facingLeft = false;
+    AudioSource audioSource;
     private void Start()
     {
         Angle = 0;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -73,11 +75,15 @@ public class Weapon : MonoBehaviour
                     if (!facingLeft)
                     {
                         Instantiate(projectile, shotPointR.position, shotPointR.transform.rotation);
+                        audioSource.Play();
+                        
                     }
                     else if (facingLeft)
                     {
 
                         Instantiate(projectile, shotPointL.position, shotPointL.transform.rotation);
+                        audioSource.Play();
+                        
                     }
 
                     timeBtwShots = startTimeBtwShots;

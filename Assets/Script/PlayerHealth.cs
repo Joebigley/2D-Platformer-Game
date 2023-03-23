@@ -15,6 +15,8 @@ public class PlayerHealth : MonoBehaviour
     public float flickerDuration;
     public SpriteRenderer[] sprites;
 
+    public AudioSource audioSource;
+
 
 
 
@@ -22,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         currenthealth = maxHealth;
+        audioSource = gameObject.AddComponent<AudioSource>();
 
     }
 
@@ -34,8 +37,13 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        audioSource.Play();
         currenthealth -= damage;
+        
+        
         StartCoroutine(DamageFlicker());
+
+       
 
 
         if (currenthealth < 0)

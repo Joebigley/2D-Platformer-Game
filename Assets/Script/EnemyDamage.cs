@@ -8,6 +8,8 @@ public class EnemyDamage : MonoBehaviour
     
     public int damage;
     public PlayerHealth playerHealth;
+    public AudioSource audioSource;
+    
 
 
 
@@ -16,6 +18,7 @@ public class EnemyDamage : MonoBehaviour
     {
         
         playerHealth = GameObject.Find("Player").GetComponent<PlayerHealth>();
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,6 +26,7 @@ public class EnemyDamage : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             playerHealth.TakeDamage(damage);
+            audioSource.Play();
         }
     
         

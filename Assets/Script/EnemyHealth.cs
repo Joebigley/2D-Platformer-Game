@@ -12,15 +12,19 @@ public class EnemyHealth : MonoBehaviour
     public float flickerDuration;
     public SpriteRenderer[] sprites;
 
+    public AudioSource audioSource;
+
     void Start()
     {
         currentHealth = maxHealth;
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
         StartCoroutine(DamageFlicker());
+        audioSource.Play();
 
 
 

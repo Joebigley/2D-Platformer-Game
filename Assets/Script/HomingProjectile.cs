@@ -14,8 +14,12 @@ public class HomingProjectile : MonoBehaviour
     public float rotateSpeed = 200f;
 
     private Rigidbody2D rb;
-    
-    
+
+    public Renderer rend;
+
+    public Collider2D Col;
+
+
 
     // Use this for initialization
     void Start()
@@ -45,8 +49,14 @@ public class HomingProjectile : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            
-            Destroy(gameObject);
+
+            rend.enabled = false; // sets to false if hit.
+
+            Col = GetComponent<Collider2D>();
+
+            Col.enabled = false;
+
+            Destroy(gameObject, 1f);
         }
 
         if (other.gameObject.CompareTag("Platform"))
