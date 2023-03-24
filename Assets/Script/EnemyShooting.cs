@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyShooting : MonoBehaviour
@@ -10,6 +11,8 @@ public class EnemyShooting : MonoBehaviour
 
     private float Timer;
     private GameObject player;
+
+   
     
     // Start is called before the first frame update
     void Start()
@@ -20,14 +23,16 @@ public class EnemyShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
-        float distance = Vector2.Distance(transform.position, player.transform.position);
-        
+        float distance = Vector2.Distance(transform.position, player.transform.position);   
 
-        if(distance < 30)
+
+
+        if (distance < 30)
         {
             Timer += Time.deltaTime;
+
+            
 
             if (Timer > 2)
             {
