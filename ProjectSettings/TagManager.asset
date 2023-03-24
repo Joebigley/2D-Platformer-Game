@@ -44,11 +44,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BG
+    uniqueID: 2973992693
+    locked: 0
+  - name: Boss
+    uniqueID: 1566293715
+    locked: 0
   - name: Level BG
     uniqueID: 3560368373
     locked: 0
   - name: Player
     uniqueID: 3547610449
+    locked: 0
+  - name: Doorway
+    uniqueID: 2242262575
     locked: 0
   - name: Level FG
     uniqueID: 1736030593
