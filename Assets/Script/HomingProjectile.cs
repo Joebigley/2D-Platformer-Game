@@ -18,6 +18,7 @@ public class HomingProjectile : MonoBehaviour
     public Renderer rend;
 
     public Collider2D Col;
+    public float lifetime = 3.0f;
 
 
 
@@ -64,6 +65,8 @@ public class HomingProjectile : MonoBehaviour
 
             Destroy(gameObject);
         }
+
+        Destroy(gameObject, lifetime);
 
     }
 }

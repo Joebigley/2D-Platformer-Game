@@ -198,7 +198,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -747356847
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 2656792531009811693, guid: d8522e091a167a74f93897824cf95bfd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -236,8 +236,8 @@ MonoBehaviour:
   - {fileID: 6464512004667284439}
   - {fileID: 4277223548851822849}
   m_Bounds:
-    m_Center: {x: 26.641575, y: 0.00000071525574, z: 0}
-    m_Extent: {x: 2.53658, y: 3.4550009, z: 0}
+    m_Center: {x: 26.641579, y: 0.0000009536743, z: 0}
+    m_Extent: {x: 2.53658, y: 3.4550016, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -833,7 +833,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -747356847
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_Sprite: {fileID: -1583367007695771300, guid: d8522e091a167a74f93897824cf95bfd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -862,7 +862,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 3879582196825301001}
   m_Bounds:
-    m_Center: {x: 0, y: 0, z: 0}
+    m_Center: {x: 0, y: 0.0000009536743, z: 0}
     m_Extent: {x: 1.4600005, y: 0.69000024, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -951,7 +951,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -747356847
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: -6524914343501261252, guid: d8522e091a167a74f93897824cf95bfd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -980,7 +980,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 4706423049347871630}
   m_Bounds:
-    m_Center: {x: 0.0000019073486, y: 0.0015268326, z: 0}
+    m_Center: {x: 0, y: 0.0015268326, z: 0}
     m_Extent: {x: 5.115, y: 5.428475, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1020,7 +1020,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 4.61}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.8
 --- !u!58 &4081602912993145608
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1036,7 +1036,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -4.61}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.8
 --- !u!58 &4081602912993145609
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1084,7 +1084,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -3.29, y: 2.97}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.8
 --- !u!58 &4081602912993145604
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1100,7 +1100,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 3.29, y: 2.97}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.8
 --- !u!58 &4081602912993145605
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1116,7 +1116,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 3.29, y: -3.05}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.8
 --- !u!58 &4081602912993145602
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1132,7 +1132,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -3.29, y: -3.05}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.8
 --- !u!114 &4081602912993145611
 MonoBehaviour:
   m_ObjectHideFlags: 0

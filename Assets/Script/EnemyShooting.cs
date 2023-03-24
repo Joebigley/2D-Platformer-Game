@@ -12,12 +12,15 @@ public class EnemyShooting : MonoBehaviour
     private float Timer;
     private GameObject player;
 
+    
+
    
     
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        
     }
 
     // Update is called once per frame
@@ -34,7 +37,7 @@ public class EnemyShooting : MonoBehaviour
 
             
 
-            if (Timer > 2)
+            if (Timer > 1.5)
             {
                 Timer = 0;
                 shoot();
@@ -49,5 +52,6 @@ public class EnemyShooting : MonoBehaviour
     void shoot()
     {
         Instantiate(bullet, bulletPos.position, Quaternion.identity); 
+        
     }
 }
